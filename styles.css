@@ -1,11 +1,13 @@
-/*CSS BY NAME*/
+/*Author: Leah Morales*/
 
 /*IMPORTED FONTS*/
-
-/*CSS REST*/
+@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap);
 
 /*ROOT VARIABLES*/
 :root{
+    --font-inter: 'Inter', Arial, sans-serif;
+    --font-kavoon: 'Kavoon', cursive;
+
     --teal: #4ca7c0;
     --purple: #484fb7;
     --lavender: #6b8fe7;
@@ -14,4 +16,231 @@
     --dark-gray: #1e1e1e;
     --white: #ffffff;
 }
+
+/*CSS RESET*/
+
+*{
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
 /*GLOBAL STYLES (mobile first/small)*/
+
+body{
+    max-width:450px; 
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--lavender);
+}
+
+h1{
+    font-size: 3em;
+    color: var(--white);
+}
+
+h2{
+    font-size: 2em;
+    color: var(--white);
+}
+
+h3{
+    font-size: 1.5em;
+    color: var(--yellow);
+}
+
+h4{
+    font-size: 1.15em;
+    color: var(--purple);
+}
+
+p{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h1, h2{
+    font-family: Kavoon;
+}
+
+h3, h4, p{
+    font-family: Inter; 
+}
+
+/*HEADER STYLES*/
+
+header{
+    padding: 20px 0;
+    text-align: center;
+}
+
+header > p{ 
+    font-style: italic;
+}
+
+/*NAV (MENU) STYLES*/
+
+nav{
+    font-family: var(--font-inter);
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--yellow);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+nav > h2{
+    font-family: var(--font-inter);
+    color: var(--dark-gray);
+    font-style: italic;
+}
+
+nav a{
+    background-color: var(--white);
+    display: block;
+    text-decoration: none;
+    color: var(--purple);
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/*SECTION STYLES*/
+
+header > p, .schedule > p, footer > p, footer a{
+    color: var(--white);
+}
+
+header, .pricing, footer{ 
+    background-color: var(--white);
+}
+
+.services > p, .pricing > table{
+    color: var(--dark-gray)
+}
+
+header, .services, .pricing, footer{
+    background-color: var(--purple);
+}
+
+.why-choose-us, .schedule{
+    background-color: var(--pink);
+}
+
+/*"SERVICES" STYLES*/
+
+.services{
+    padding-top: 12px;
+    padding-bottom: 12px
+}
+
+.services > div{
+    background-color: var(--white);   
+    margin: 10px;
+    padding: 20px 10px;
+
+    border-radius: 15px;
+}
+
+/*"WHY CHOOSE US" STYLES*/
+
+.why-choose-us{
+    padding-top: 12px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    border-radius: 15px;
+    padding: 15px 10px;    
+    width: 100%;
+}
+
+.container > *{
+    border-radius: 10px;
+    padding: 35px 0;
+    flex: 1 1 150px;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+.why-choose-us #personalized-approach{
+    background-color: var(--teal);
+}
+
+.why-choose-us #proven-results{
+    background-color: var(--lavender);
+}
+
+.why-choose-us #supportive-environment{
+    background-color: var(--yellow);
+}
+
+.why-choose-us #flexible-options{
+    background-color: var(--white);
+}
+
+/*PRICING STYLES*/
+
+.pricing{
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.pricing > table{
+    background-color: var(--yellow);
+    border: solid var(--yellow) 1px;
+    font-family: var(--font-inter);
+    color: var(--dark-gray);
+    padding: 0;
+    margin: 5px auto;
+    align-self: center;
+    max-width: 65%;
+    width: 100%;
+}
+
+th{
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+    padding: 10px 0;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+}
+
+td{
+    background-color: var(--white);
+    vertical-align: middle;
+    align-items: center;
+}
+
+/*"SCHEDULE" STYLES*/
+
+.schedule{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+button{
+    background-color: var(--white);
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.15em;
+    box-shadow: 4px 4px 4px var(--dark-gray);
+    width: 20rem;
+    display: block;
+    margin: 0 auto;
+}
+
+/*FOOTER STYLES*/
+
+footer{
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0;
+    justify-content: center;
+    margin-bottom: 40px;
+}
